@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 // import './Card.css'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import Detail from './Detail';
 import withStyles from 'react-jss';
 
@@ -86,7 +86,7 @@ function Card(props) {
 
             <div className={classes.container}>
                 {characters.map( character => (
-                    <Link to={`/details/${character.char_id}`} >  
+                    // <Link to={`/details/${character.char_id}`} >  
                         <div className={classes.card} key={character.char_id}>
                             <div>
                                 <img src={character.img} alt={character.name} />
@@ -95,7 +95,7 @@ function Card(props) {
                             <br/>
 
                         </div>
-                    </Link>
+                    // {/* </Link> */}
                 ))}
             </div>
         </>
