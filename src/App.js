@@ -1,9 +1,9 @@
-import React from 'react'
-import { Route, Switch, Link} from 'react-router-dom';
-import Card from './Card';
-import Detail from './Detail';
+import React from "react";
+import { Route, Switch, Link } from "react-router-dom";
+import Card from "./Card";
+import Detail from "./Detail";
 
-import withStyles from 'react-jss';
+import withStyles from "react-jss";
 
 const styles = {
   header: {
@@ -12,8 +12,8 @@ const styles = {
     height: "65px",
     margin: "0rem",
     backgroundColor: "#d9d9d9",
-    '& a': {
-      display:"flex",
+    "& a": {
+      display: "flex",
       justifyContent: "center",
       alignItems: "center",
       marginLeft: "15rem",
@@ -22,10 +22,13 @@ const styles = {
       fontSize: "2rem",
       fontFamily: "sans",
       fontWeight: "lighter",
-      fontStyle: "italic"
-    }
-  }
-}
+      fontStyle: "italic",
+      "@media (max-width: 786px)": {
+        marginLeft: "1rem",
+      },
+    },
+  },
+};
 
 function App(props) {
   const { classes } = props;
