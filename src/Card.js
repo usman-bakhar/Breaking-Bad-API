@@ -88,13 +88,13 @@ function Card(props) {
   const [characters, setCharacters] = useState([]);
   const [search, setSearch] = useState("");
 
-  const getCharaters = async () => {
-    const response = await getCharactersList(search);
-    const data = response.data;
-    setCharacters(data);
-  };
-
   useEffect(() => {
+    const getCharaters = async () => {
+      const response = await getCharactersList(search);
+      const data = response.data;
+      setCharacters(data);
+    };
+
     getCharaters();
   }, [search]);
 
